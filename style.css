@@ -1,0 +1,111 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    /* min-height: 100%; */
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-size: cover;
+    /* background-color: rgb(222, 158, 158); */
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+
+}
+
+h2 {
+    margin-top: 5rem;
+    font-size: 3rem;
+    color: rgb(235, 52, 52, 0.7);
+
+    text-shadow: 2px 2px 1px rgb(64, 64, 64);}
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* color: white; */
+    color: rgb(235, 52, 52, 0.7);
+    text-align: left;
+    /* background-color: rgba(0, 0, 0, 0.464); */
+    background-color: rgba(0, 0, 0, 0.2275);
+    /* background-color: rgb(235, 52, 52, 0.9); */
+
+    width: 23%;
+    height: 60%;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+input {
+    /* background-color: rgb(136, 128, 128,0.8); */
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    /* color: black; */
+}
+
+#btn {
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    color: gray;
+    font-size: 1.2rem;
+    /* background-color: rgb(136, 128, 128,0.8); */
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background-color: black; */
+    background-color: rgb(235, 52, 52, 0.7);
+    text-decoration: none;
+    /* box-shadow: -8px 2px 2px 2px rgb(0 0 0 / 40%); */
+    height: 7%;
+    box-sizing: border-box;
+    box-shadow: -8px 2px 2px 2px rgb(0 0 0 / 40%);
+
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.menu li:hover {
+    background-color: black;
+    border-radius: 5px;
+    padding: 0.3rem;
+    transition: 0.4s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu li {
+    /* padding: 5px 14px; */
+    margin-right: 3rem;
+    text-decoration: none;
+    list-style: none;
+}
