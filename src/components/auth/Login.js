@@ -35,7 +35,7 @@ const Login = () => {
         localStorage.setItem("userID", userCredential.user.uid);
         navigate("/");
       })
-      .catch((err) => {});
+      .catch((err) => { });
   };
 
   const loginUsingGoogle = async (event) => {
