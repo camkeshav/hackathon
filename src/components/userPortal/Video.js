@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProgressComponent from "@material-ui/core/CircularProgress";
 import { JitsiMeeting } from "@jitsi/react-sdk";
-import {uname} from "../auth/Login"
+// import { uname } from "../auth/Login"
 // import { JitsiMeetExternalApi } from "@jitsi/react-sdk/lib/types";
 
 function Video() {
@@ -39,7 +39,7 @@ function Video() {
     //   });
       console.log("Local User Joined");
         setLoading(false);
-        api.executeCommand("displayName", `${uname} Pareek`);
+        api.executeCommand("displayName", `${username} Pareek`);
     } catch (error) {
       console.error("Failed to load Jitsi API", error);
     }
