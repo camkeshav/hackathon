@@ -7,6 +7,7 @@ import {
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
+
 import GoogleIcon from '@mui/icons-material/Google';
 // let uname = "";
 
@@ -32,8 +33,7 @@ const Login = () => {
     await signInWithEmailAndPassword(
       auth,
       loginInput.email,
-      loginInput.password,
-      // loginInput.username,
+      loginInput.password
     )
       .then((userCredential) => {
         localStorage.setItem("userID", userCredential.user.uid);
@@ -64,17 +64,7 @@ const Login = () => {
         const credential = GoogleAuthProvider.credentialFromError(error);
         // ...
       });
-
   };
-
-    var uname = loginInput.username;
-
-      // const user = firebase.auth().currentUser;
-      // uname = user.username;
-
-
-  
-  
 
   return (
     <div className="formWarpper ">
@@ -120,4 +110,4 @@ const Login = () => {
   );
 };
 
-export default {}
+export default Login;

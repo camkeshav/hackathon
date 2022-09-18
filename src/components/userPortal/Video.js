@@ -51,11 +51,17 @@ function Video() {
 
       //   });
       console.log("Local User Joined");
-      setLoading(false);
-      api.executeCommand("displayName", `${username} Pareek`);
+        setLoading(false);
+        api.executeCommand("displayName", `${username} Pareek`);
+        api.addListener('readyToClose', ()=>{
+            // let contain = document.getElementById('jitsi-container');
+            // contain.style.display = 'none';
+            jitsiContainerStyle.display = 'none';
+        });
+            
     } catch (error) {
       console.error("Failed to load Jitsi API", error);
-    }
+    }  
   }
 
   useEffect(() => {
