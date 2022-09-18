@@ -3,8 +3,12 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { db } from "../../config/firebase-config";
 import Modal from "react-modal";
+import Video from "./Video";
+
+import "./userProfile.css";
 
 const UID = [1, 2, 3, 4, 5];
+let c = 1;
 
 const UserPage = () => {
   const navigate = useNavigate();
@@ -12,7 +16,18 @@ const UserPage = () => {
   const [conversingUser, setConversingUser] = useState([]);
   const [selectedMeeting, setSelectedMeeting] = useState("");
   const [open, setOpen] = useState(false);
+  const [c, setC] = useState(0);
 
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+    },
+  };
   useEffect(() => {
     const getFavs = async () => {
       const docRefGet = doc(db, "admin", "links");
@@ -48,43 +63,46 @@ const UserPage = () => {
 
   const handleClose = () => {
     setOpen(false);
+    setC(1)
   };
 
   return (
-    <div>
-      <div>
-        <h3>
+    <div className="userPageWrapper">
+      <div className="availableUsers">
+        <h3 className="noteForUser">
           You want to have your meeting with ? Select any one user and any one
           link available .
         </h3>
-        {UID.map((uid, index) => (
-          <div key={index + uid}>
-            <label
-              onClick={() => {
-                setOpen(true);
-              }}
-              htmlFor="userChecked"
-            >
-              User : {uid}
-            </label>
-            <input
-              onChange={() => {
-                addUser(uid);
-              }}
-              id="userCheck"
-              type="checkbox"
-            />
-          </div>
-        ))}
+        <div className="perAdminUserWrapper">
+          {UID.map((uid, index) => (
+            <div className="user" key={index + uid}>
+              <label
+                onClick={() => {
+                  setOpen(true);
+                }}
+                htmlFor="userChecked"
+              >
+                User{uid}
+              </label>
+              <input
+                onChange={() => {
+                  addUser(uid);
+                }}
+                id="userCheck"
+                type="checkbox"
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       <Modal
         isOpen={open}
         onRequestClose={handleClose}
-        // style={customStyles}
+        style={customStyles}
         contentLabel="Example Modal"
       >
-        <div>
+        <div className="meetingSchedule">
           {meetings?.map((meet, index) => (
             <div key={index}>
               <input
@@ -101,9 +119,10 @@ const UserPage = () => {
               </label>
             </div>
           ))}
-          <button onClick={handleClose}>Start/Schedule</button>
+          <button onClick={handleClose}>Start Meet</button>
         </div>
       </Modal>
+      <div>{(open === false && c === 1) ? <Video /> : () => {setC(0)}}</div>
     </div>
   );
 };

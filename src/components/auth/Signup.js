@@ -7,6 +7,7 @@ import {
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import "./signuup.css";
+import GoogleIcon from '@mui/icons-material/Google';
 
 const SignUp = () => {
   const [input, setInput] = useState({
@@ -65,9 +66,15 @@ const SignUp = () => {
   return (
     <div className="formWarpper SignupWrapper">
       <form onSubmit={signupHandler__s1}>
+
         <p className="signupname">SignUp</p>
         <label className="labelname" htmlFor="username">Username</label>
         <input className="signininput"
+
+        <p><h1><center>SignUp</center></h1></p>
+        <label className="labelname" htmlFor="username">Username: </label>
+        <input className="logininput"
+
           id="username"
           onChange={inputChangeHandler__s1}
           type="text"
@@ -76,8 +83,13 @@ const SignUp = () => {
           autoComplete="off"
           required
         />
+
         <label className="labelname" htmlFor="password">Password</label>
         <input className="signininput"
+
+        <label className="labelname" htmlFor="password">Password: </label>
+        <input className="logininput"
+
           id="password"
           onChange={inputChangeHandler__s1}
           type="password"
@@ -86,8 +98,13 @@ const SignUp = () => {
           autoComplete="off"
           required
         />
+
         <label className="labelname" htmlFor="email">E-Mail</label>
         <input className="signininput"
+
+        <label className="labelname" htmlFor="email">E-Mail: </label>
+        <input className="logininput"
+
           id="email"
           onChange={inputChangeHandler__s1}
           type="email"
@@ -96,14 +113,14 @@ const SignUp = () => {
           autoComplete="off"
           required
         />
-
         <button className="submitsigninbtn" type="submit">SignUp</button>
         {/* <Link to="/login">Already Registered? Login</Link> */}
       </form>
       <form onSubmit={signinWithGoogle}>
         <button className="submitsigninbtn googlebtn" type="submit">Google</button>
+        <button className="submitbtn" type="submit"><GoogleIcon/></button>
       </form>
-      <button
+      <button className="adminbtn"
         onClick={() => {
           navigate("/admin");
         }}

@@ -15,7 +15,7 @@
     /* height: 20rem; */
     font-size: 1.2rem;
     padding: 1rem 2rem;
-    margin-top: 12rem;
+    margin-top: 16rem;
     padding: 3rem;
 }
 
@@ -27,7 +27,7 @@
 .signininput{
     margin-bottom: 1.5rem;
     padding: 0.4rem;
-    width: 15rem;
+    width: 24rem;
 }
 
 .submitsigninbtn{
@@ -37,4 +37,5 @@
 }
 .googlebtn{
     margin-top: 0.5rem;
+    ;
 }
