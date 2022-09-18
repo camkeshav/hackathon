@@ -6,6 +6,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import "./login.css";
 
 const Login = () => {
   const [loginInput, setLoginInput] = useState({
@@ -33,7 +34,7 @@ const Login = () => {
     )
       .then((userCredential) => {
         localStorage.setItem("userID", userCredential.user.uid);
-        navigate("/");
+        navigate("/user");
       })
       .catch((err) => {});
   };
@@ -48,7 +49,7 @@ const Login = () => {
         // The signed-in user info.
         const user = result.user;
         // ...
-        navigate("/");
+        navigate("/user");
       })
       .catch((error) => {
         // Handle Errors here.
@@ -91,6 +92,13 @@ const Login = () => {
       <form onSubmit={loginUsingGoogle}>
         <button type="submit">Google</button>
       </form>
+      <button
+        onClick={() => {
+          navigate("/admin");
+        }}
+      >
+        Enter as Admin
+      </button>
     </div>
   );
 };
