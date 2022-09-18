@@ -15,18 +15,19 @@
     height: 20rem;
     font-size: 1.5rem;
     padding: 1rem 2rem;
-    margin-top: 12rem;
+    margin-top: 16rem;
     padding: 3rem;
 }
 
 .logininput{
     margin-bottom: 1.5rem;
     padding: 0.4rem;
-    width: 15rem;
+    width: 24rem;
 }
 
 .submitbtn{
     margin-bottom: 0.5rem;
     width: 16rem;
     padding: 0.4rem;
+    ;
 }

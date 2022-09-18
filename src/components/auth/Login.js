@@ -8,6 +8,9 @@ import {
 import { useNavigate } from "react-router-dom";
 import "./login.css";
 
+import GoogleIcon from '@mui/icons-material/Google';
+// let uname = "";
+
 const Login = () => {
   const [loginInput, setLoginInput] = useState({
     email: "",
@@ -66,8 +69,8 @@ const Login = () => {
   return (
     <div className="formWarpper ">
       <form onSubmit={formSubmitHandler}>
-        <p >Login</p>
-        <label htmlFor="email">E-Mail</label>
+        <p><center><h1>Login</h1></center></p>
+        <label htmlFor="email">E-Mail: </label>
         <input className="logininput"
           onChange={inputChangeHandler}
           type="email"
@@ -76,7 +79,7 @@ const Login = () => {
           autoComplete="off"
           required
         />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Password: </label>
         <input className="logininput"
           onChange={inputChangeHandler}
           type="password"
@@ -90,12 +93,12 @@ const Login = () => {
         {/* <Link to="/signup">New User? SignUp yourself</Link> */}
       </form>
          <form onSubmit={loginUsingGoogle}>
-        <button className="submitbtn" type="submit">Google</button>
+        <button className="submitbtn" type="submit" ><GoogleIcon/></button>
       </form>
 
      
 
-      <button
+      <button className="adminbtn"
         onClick={() => {
           navigate("/admin");
         }}

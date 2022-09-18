@@ -9,7 +9,6 @@ body{
     background-size: cover;
     /* background-color: rgb(222, 158, 158); */
     background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
-
     display: flex;
     align-items: center;
     /* justify-content: center; */
