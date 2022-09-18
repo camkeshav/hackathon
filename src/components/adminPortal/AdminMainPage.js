@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import AdminMeets from "./AdminMeets";
 import ModalContent from "./ModalContent";
-
+import "./adminmain.css";
 const AdminMainPage = () => {
   const [open, setOpen] = useState(false);
   const [meetingsList, setMeetingsList] = useState([
@@ -45,15 +45,14 @@ const AdminMainPage = () => {
   Modal.setAppElement(document.getElementById("root"));
 
   return (
-    <div>
-      <div>
+    <div className="adminbg">
+      <div className="adminlink">
         <h2>Admin Link</h2>
         <p>https://www.admin.com</p>
+        <button className="btnmeet" onClick={addNewMeetingHandler}>Add meeting</button>
       </div>
-      <div>
-        <h1>Your meetings</h1>
-        <button onClick={addNewMeetingHandler}>Add meeting</button>
-      </div>
+        <h1 className="meetingschedule">Your meetings</h1>
+   
       {meetingsList?.map((meet, index) => (
         <AdminMeets
           id={index}

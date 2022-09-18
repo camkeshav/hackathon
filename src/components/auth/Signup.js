@@ -6,6 +6,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import "./signuup.css";
 
 const SignUp = () => {
   const [input, setInput] = useState({
@@ -62,11 +63,11 @@ const SignUp = () => {
   };
 
   return (
-    <div className="formWarpper loginWrapper">
+    <div className="formWarpper SignupWrapper">
       <form onSubmit={signupHandler__s1}>
         <p>SignUp</p>
-        <label htmlFor="username">Username</label>
-        <input
+        <label className="labelname" htmlFor="username">Username</label>
+        <input className="logininput"
           id="username"
           onChange={inputChangeHandler__s1}
           type="text"
@@ -75,8 +76,8 @@ const SignUp = () => {
           autoComplete="off"
           required
         />
-        <label htmlFor="password">Password</label>
-        <input
+        <label className="labelname" htmlFor="password">Password</label>
+        <input className="logininput"
           id="password"
           onChange={inputChangeHandler__s1}
           type="password"
@@ -85,8 +86,8 @@ const SignUp = () => {
           autoComplete="off"
           required
         />
-        <label htmlFor="email">E-Mail</label>
-        <input
+        <label className="labelname" htmlFor="email">E-Mail</label>
+        <input className="logininput"
           id="email"
           onChange={inputChangeHandler__s1}
           type="email"
@@ -96,11 +97,11 @@ const SignUp = () => {
           required
         />
 
-        <button type="submit">SignUp</button>
+        <button className="submitbtn" type="submit">SignUp</button>
         {/* <Link to="/login">Already Registered? Login</Link> */}
       </form>
       <form onSubmit={signinWithGoogle}>
-        <button type="submit">Google</button>
+        <button className="submitbtn" type="submit">Google</button>
       </form>
     </div>
   );

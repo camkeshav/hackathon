@@ -2,6 +2,7 @@ import { signOut } from "firebase/auth";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { auth } from "../../config/firebase-config";
+import "./navbar.css"
 
 const Navbar = () => {
   const logoutHandler = () => {
@@ -16,6 +17,7 @@ const Navbar = () => {
 
   return (
     <div className="navbarWrapper">
+      <h1 className="topicname">Meeting Scheduler</h1>
       <ul className="navLinkWrapper navLinkWrapperWeb">
         <div className="signIn navLinks">
           <li>
