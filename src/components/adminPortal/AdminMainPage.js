@@ -53,7 +53,8 @@ const AdminMainPage = () => {
       </div>
         <h1 className="meetingschedule">Your meetings</h1>
    
-      {meetingsList?.map((meet, index) => (
+     <div className="wrapflex">
+     {meetingsList?.map((meet, index) => (
         <AdminMeets
           id={index}
           key={index}
@@ -67,6 +68,7 @@ const AdminMainPage = () => {
           onDelete={deleteMeeting}
         />
       ))}
+     </div>
       <Modal
         isOpen={open}
         onRequestClose={handleClose}

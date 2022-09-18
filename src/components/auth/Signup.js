@@ -65,9 +65,9 @@ const SignUp = () => {
   return (
     <div className="formWarpper SignupWrapper">
       <form onSubmit={signupHandler__s1}>
-        <p>SignUp</p>
+        <p className="signupname">SignUp</p>
         <label className="labelname" htmlFor="username">Username</label>
-        <input className="logininput"
+        <input className="signininput"
           id="username"
           onChange={inputChangeHandler__s1}
           type="text"
@@ -77,7 +77,7 @@ const SignUp = () => {
           required
         />
         <label className="labelname" htmlFor="password">Password</label>
-        <input className="logininput"
+        <input className="signininput"
           id="password"
           onChange={inputChangeHandler__s1}
           type="password"
@@ -87,7 +87,7 @@ const SignUp = () => {
           required
         />
         <label className="labelname" htmlFor="email">E-Mail</label>
-        <input className="logininput"
+        <input className="signininput"
           id="email"
           onChange={inputChangeHandler__s1}
           type="email"
@@ -97,11 +97,11 @@ const SignUp = () => {
           required
         />
 
-        <button className="submitbtn" type="submit">SignUp</button>
+        <button className="submitsigninbtn" type="submit">SignUp</button>
         {/* <Link to="/login">Already Registered? Login</Link> */}
       </form>
       <form onSubmit={signinWithGoogle}>
-        <button className="submitbtn" type="submit">Google</button>
+        <button className="submitsigninbtn googlebtn" type="submit">Google</button>
       </form>
     </div>
   );

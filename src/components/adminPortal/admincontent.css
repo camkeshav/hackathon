@@ -1,0 +1,32 @@
+.admincontent{
+   background-color: rgb(189, 183, 183);
+   width: 15rem;
+   height: 35rem;
+   padding: 2rem;
+}
+
+.contentinput{
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    width: 15rem;
+    padding: 0.41rem;
+    border-style: none;
+    margin-top: 0.1rem;
+    margin-left: 0.1rem;
+}
+
+.displayslot{
+    display: block;
+}
+
+.meridianam{
+    display: flex;
+    border: black solid 2px;
+}
+
+.addbtn{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 12rem;
+    border-radius: 2rem;
+}

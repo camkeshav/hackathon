@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./admincontent.css"
 
 const DUMMY_SLOTS = [
   {
@@ -107,8 +108,8 @@ const ModalContent = (props) => {
 
   const displaySlots = () => {
     return slots?.map((t, index) => (
-      <div key={index}>
-        <span
+      <div  key={index}>
+        <span className="displayslot"
           onClick={() => {
             setLL(t.lowerLimit);
             setUL(t.upperLimit);
@@ -123,9 +124,9 @@ const ModalContent = (props) => {
 
   return (
     <div>
-      <form onSubmit={handleModalSubmit}>
-        <label htmlFor="appointmentName">Appointment name</label>
-        <input
+      <form className="admincontent" onSubmit={handleModalSubmit}>
+        <label  htmlFor="appointmentName">Appointment name</label>
+        <input  className="contentinput"
           required
           value={meetings.appointmentName}
           name="appointmentName"
@@ -135,7 +136,8 @@ const ModalContent = (props) => {
         <label value={meetings.appointmentDesc} htmlFor="description">
           Description
         </label>
-        <input
+
+        <input className="contentinput"
           required
           onChange={setMeetingHandler}
           name="appointmentDesc"
@@ -144,18 +146,20 @@ const ModalContent = (props) => {
         <label value={meetings.meetingLink} htmlFor="description">
           Link
         </label>
-        <input
+
+        <input className="contentinput"
           required
           onChange={setMeetingHandler}
           name="meetingLink"
           type="url"
         />
         <label htmlFor="duration">Appointment Duration</label>
+
         <div id="duration">
           {displaySlots()}
           <div>
             {meridiem}{" "}
-            <span
+            <span className="meridianam"
               onClick={() => {
                 setMeridiem((prev) => (prev === "am" ? "pm" : "am"));
               }}
@@ -165,7 +169,7 @@ const ModalContent = (props) => {
           </div>
         </div>
         <div></div>
-        <button type="submit">Add</button>
+        <button className="addbtn" type="submit">Add</button>
       </form>
     </div>
   );

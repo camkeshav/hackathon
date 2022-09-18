@@ -10,15 +10,19 @@
     /* background-color: rgba(0, 0, 0, 0.464); */
     background-color: rgba(0, 0, 0, 0.2275);
     /* background-color: rgb(235, 52, 52, 0.9); */
-
-    width: 35%;
+    width: 25%;
     /* height: 15rem; */
     font-size: 1.5rem;
     padding: 1rem 2rem;
     margin-top: 16rem;
     padding: 3rem;
 }
-
+.loginname{
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    padding-top: 0;
+}
 .logininput{
     margin-bottom: 1.5rem;
     padding: 0.3rem;

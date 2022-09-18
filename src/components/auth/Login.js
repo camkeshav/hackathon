@@ -66,8 +66,8 @@ const Login = () => {
   return (
     <div className="formWarpper ">
       <form onSubmit={formSubmitHandler}>
-        <p >Login</p>
-        <label htmlFor="email">E-Mail</label>
+        <p className="loginname">Login</p>
+        <label htmlFor="email">E-Mail:- </label>
         <input className="logininput"
           onChange={inputChangeHandler}
           type="email"
@@ -76,7 +76,7 @@ const Login = () => {
           autoComplete="off"
           required
         />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Password:- </label>
         <input className="logininput"
           onChange={inputChangeHandler}
           type="password"

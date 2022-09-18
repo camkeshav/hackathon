@@ -1,8 +1,7 @@
-.allmeetings{
-    display: flex;
-    flex-wrap: wrap;
-}
+
 .deletebtn{
-    padding: 0.2rem;
+    margin-top: 2rem;
+    width: 15rem;
+    padding: 0.3rem;
     border-radius: 1.5rem;
 }
