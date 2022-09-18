@@ -3,9 +3,12 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { db } from "../../config/firebase-config";
 import Modal from "react-modal";
+import Video from "./Video";
+
 import "./userProfile.css";
 
 const UID = [1, 2, 3, 4, 5];
+let c = 1;
 
 const UserPage = () => {
   const navigate = useNavigate();
@@ -13,6 +16,7 @@ const UserPage = () => {
   const [conversingUser, setConversingUser] = useState([]);
   const [selectedMeeting, setSelectedMeeting] = useState("");
   const [open, setOpen] = useState(false);
+  const [c, setC] = useState(0);
 
   const customStyles = {
     content: {
@@ -59,6 +63,7 @@ const UserPage = () => {
 
   const handleClose = () => {
     setOpen(false);
+    setC(1)
   };
 
   return (
@@ -114,9 +119,10 @@ const UserPage = () => {
               </label>
             </div>
           ))}
-          <button onClick={handleClose}>Start/Schedule</button>
+          <button onClick={handleClose}>Start Meet</button>
         </div>
       </Modal>
+      <div>{(open === false && c === 1) ? <Video /> : () => {setC(0)}}</div>
     </div>
   );
 };
