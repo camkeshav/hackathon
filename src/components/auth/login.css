@@ -1,32 +1,32 @@
-.formWarpper{
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* color: white; */
-    color: rgb(235, 52, 52, 0.7);
-    text-align: left;
-    /* background-color: rgba(0, 0, 0, 0.464); */
-    background-color: rgba(0, 0, 0, 0.2275);
-    /* background-color: rgb(235, 52, 52, 0.9); */
+.formWarpper {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* color: white; */
+  color: rgb(235, 52, 52, 0.7);
+  text-align: left;
+  /* background-color: rgba(0, 0, 0, 0.464); */
+  background-color: rgba(0, 0, 0, 0.2275);
+  /* background-color: rgb(235, 52, 52, 0.9); */
 
-    width: 35%;
-    /* height: 15rem; */
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    margin-top: 16rem;
-    padding: 3rem;
+  width: 35%;
+  /* height: 15rem; */
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  margin-top: 13rem;
+  padding: 3rem;
 }
 
-.logininput{
-    margin-bottom: 1.5rem;
-    padding: 0.3rem;
-    width: 15rem;
+.logininput {
+  margin-bottom: 1.5rem;
+  padding: 0.3rem;
+  width: 10rem;
 }
 
-.submitbtn{
-    margin-bottom: 0.5rem;
-    width: 16rem;
-    padding: 0.4rem;
+.submitbtn {
+  margin-bottom: 0.5rem;
+  width: 16rem;
+  padding: 0.4rem;
 }
