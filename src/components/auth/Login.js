@@ -64,11 +64,11 @@ const Login = () => {
   };
 
   return (
-    <div className="formWarpper loginWrapper">
+    <div className="formWarpper ">
       <form onSubmit={formSubmitHandler}>
-        <p>Login</p>
+        <p >Login</p>
         <label htmlFor="email">E-Mail</label>
-        <input
+        <input className="logininput"
           onChange={inputChangeHandler}
           type="email"
           value={loginInput.email}
@@ -77,7 +77,7 @@ const Login = () => {
           required
         />
         <label htmlFor="password">Password</label>
-        <input
+        <input className="logininput"
           onChange={inputChangeHandler}
           type="password"
           value={loginInput.password}
@@ -85,13 +85,16 @@ const Login = () => {
           autoComplete="off"
           required
         />
-        <button type="submit">Login</button>
+        <button className="submitbtn" type="submit">Login</button>
         {/* <button type="submit">{isLoading ? "Loading..." : "Login"}</button> */}
         {/* <Link to="/signup">New User? SignUp yourself</Link> */}
       </form>
-      <form onSubmit={loginUsingGoogle}>
-        <button type="submit">Google</button>
+         <form onSubmit={loginUsingGoogle}>
+        <button className="submitbtn" type="submit">Google</button>
       </form>
+
+     
+
       <button
         onClick={() => {
           navigate("/admin");
@@ -99,6 +102,7 @@ const Login = () => {
       >
         Enter as Admin
       </button>
+
     </div>
   );
 };

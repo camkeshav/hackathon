@@ -1,0 +1,28 @@
+/* .adminbg{
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+} */
+
+.adminbg
+{
+    margin-top: 12rem;
+}
+
+.adminlink{
+    background-color: rgb(176, 156, 156);
+    /* padding: 0.2rem; */
+    width: 80rem;
+    border-radius: 2rem;
+padding: 0.1rem 3rem;
+}
+
+.btnmeet{
+    width: 12rem;
+    margin-bottom: 1rem;
+    padding: 0.2rem;
+    border-radius: 2rem;
+    border-style: none;
+}
+.meetingschedule{
+ color: rgb(235, 52, 52, 0.7);
+ font-weight: 7rem;
+}
