@@ -33,7 +33,7 @@ const SignUp = () => {
         // Signed in
         const user = userCredential.user;
         console.log("yeah!!!", user);
-        navigate("/");
+        navigate("/user");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -102,6 +102,13 @@ const SignUp = () => {
       <form onSubmit={signinWithGoogle}>
         <button type="submit">Google</button>
       </form>
+      <button
+        onClick={() => {
+          navigate("/admin");
+        }}
+      >
+        Enter as Admin
+      </button>
     </div>
   );
 

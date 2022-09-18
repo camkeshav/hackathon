@@ -1,18 +1,13 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
+import { collection, doc, getDoc, setDoc } from "firebase/firestore";
 import AdminMeets from "./AdminMeets";
 import ModalContent from "./ModalContent";
+import { db } from "../../config/firebase-config";
 
 const AdminMainPage = () => {
   const [open, setOpen] = useState(false);
-  const [meetingsList, setMeetingsList] = useState([
-    {
-      m: {},
-      ll: "",
-      ul: "",
-      mm: "",
-    },
-  ]);
+  const [meetingsList, setMeetingsList] = useState([]);
 
   const addNewMeetingHandler = () => {
     setOpen(true);
@@ -22,8 +17,26 @@ const AdminMainPage = () => {
   };
 
   const addMeeting = (m, ll, ul, mm) => {
-    setMeetingsList((prev) => [...prev, { m: m, ll: ll, ul: ul, mm: mm }]);
+    // let meetingCopy = JSON.parse(JSON.stringify(meetingsList));
+    // setMeetingsList((prev) => [...prev, { m: m, ll: ll, ul: ul, mm: mm }]);
+    let meetingCopy = [...meetingsList];
+    let visitedTimeSlots = [{ ll, ul, mm }];
+    let newMeetingObj = { m: m, ll: ll, ul: ul, mm: mm };
+    meetingCopy.push(newMeetingObj);
+    visitedTimeSlots.push({ ll, ul, mm });
+
+    console.log(meetingCopy);
+    setMeetingsList(meetingCopy);
+    console.log(visitedTimeSlots);
+    setDoc(doc(db, "admin", "links"), {
+      meetings: meetingCopy,
+      visitedSlots: [...visitedTimeSlots],
+    });
   };
+
+  // meetingDetail: { },
+  // timeSlot: "",
+  //   users:[],
 
   const deleteMeeting = (id) => {
     setMeetingsList((prev) => {
